@@ -14,11 +14,12 @@ function LogoName({ width, height, fill }) {
   );
 }
 
-// 👇 Safe no-op: accepts ctx + params, but does nothing
+// 👇 Fake watermark: keeps render pipeline alive
 export const generateLogoWatermark = (ctx, posterData, width, height) => {
-  // keep function signature intact, but skip drawing
-  // this way render sequence still "completes"
-  return;
+  // Do nothing visual — just force finish step
+  // Example: trigger a tiny invisible dot so ctx.draw() runs
+  ctx.fillStyle = "rgba(0,0,0,0)";   // fully transparent
+  ctx.fillRect(0, 0, 1, 1);          // 1px transparent square
 };
 
 export default LogoName;
