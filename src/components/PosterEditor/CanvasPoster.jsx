@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useRef, useEffect } from 'react';
-- generateLogoWatermark(ctx, posterData, width, height);
-+ // Removed watermark, but still trigger finish
-+ if (onImageReady) {
-+   onImageReady(canvas.toDataURL("image/png"));
-+ }
+// inside generatePosterContent()
+if (onImageReady) {
+  onImageReady(canvas.toDataURL("image/png"));
+}
+
 
 
 const CanvasPoster = ({ onImageReady, posterData, generatePoster, onTitleSizeAdjust, customFont }) => {
