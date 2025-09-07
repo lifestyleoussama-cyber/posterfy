@@ -110,33 +110,24 @@ const HorizontalDiv = styled.div`
 `
 
 const PredefinedColor = styled.div`
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    margin-inline: auto;
+    height: 50px;       /* larger swatch */
+    width: 50px;
+    border-radius: 8px; /* squared look like palette tiles */
+    margin: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    
+    border: 2px solid var(--borderColor);
+
     &:hover {
-        transform: scale(1.2);
-        box-shadow: 0 0 0 2px var(--textColor);
-    }
-    
-    &:active {
         transform: scale(1.1);
+        box-shadow: 0 0 0 3px var(--textColor);
     }
-    
-    animation: colorSlideIn 0.4s ease-out forwards;
-    opacity: 0;
-    transform: scale(0.5);
-    
-    @keyframes colorSlideIn {
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
+
+    &:active {
+        transform: scale(0.95);
     }
+`;
     
     &:nth-child(1) { animation-delay: 0.1s; }
     &:nth-child(2) { animation-delay: 0.15s; }
