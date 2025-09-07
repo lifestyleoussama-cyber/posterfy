@@ -6,7 +6,6 @@ export function generateLogoWatermark(ctx, posterData, width, height) {
   // Do nothing (watermark removed)
   return;
 }
-
 const CanvasPoster = ({ onImageReady, posterData, generatePoster, onTitleSizeAdjust, customFont }) => {
     const canvasRef = useRef(null);
 
