@@ -14,10 +14,11 @@ function LogoName({ width, height, fill }) {
   );
 }
 
-// 👇 Watermark function turned into a no-op
-export const generateLogoWatermark = (fillColor, width = 500, height = 134) => {
-  // Do nothing – watermark removed
-  return '';
+// 👇 Safe no-op: accepts ctx + params, but does nothing
+export const generateLogoWatermark = (ctx, posterData, width, height) => {
+  // keep function signature intact, but skip drawing
+  // this way render sequence still "completes"
+  return;
 };
 
 export default LogoName;
