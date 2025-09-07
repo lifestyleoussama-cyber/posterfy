@@ -2,10 +2,8 @@
 import { useRef, useEffect } from 'react';
 // src/components/svgs/LogoName.jsx
 
-export function generateLogoWatermark(ctx, posterData, width, height) {
-  // Do nothing (watermark removed)
-  return;
-}
+import { generateLogoWatermark } from '../svgs/LogoName.jsx';
+
 const CanvasPoster = ({ onImageReady, posterData, generatePoster, onTitleSizeAdjust, customFont }) => {
     const canvasRef = useRef(null);
 
